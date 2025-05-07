@@ -20,10 +20,12 @@ function parseURL(url) {
 const url = "https://educacionadistancia.juntadeandalucia.es/centros/sevilla/mod/url/view.php?id=762901";
 console.log(parseURL(url));
 
+
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 function rotateArray(arr, n) {
     const len = arr.length;
     n = n % len;
     return arr.slice(-n).concat(arr.slice(0, -n));
 }
 
-console.log(rotateArray(array, 3));
+console.log(rotateArray(array, 4));
