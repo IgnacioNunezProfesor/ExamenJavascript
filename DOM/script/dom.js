@@ -1,7 +1,7 @@
 window.onload = setupPage;
 function setupPage() {
     setChiste();
-    setRemoveButtonsEvent();
+    setButtonsEvent();
 }
 
 
@@ -13,8 +13,25 @@ let chistes = [
 "¿Por qué el programador fue al terapeuta? Porque tenía demasiados problemas sin resolver."
 ];
 
-function setRemoveButtonsEvent(){
-    let buttons = document.querySelectorAll("button.btnRemove").
+var id = "";
+
+function setButtonsEvent(){
+    let buttonsEdit = document.querySelectorAll("button.btnedit").
+    forEach(function(button) {
+        button.addEventListener("click", function () {
+            if (button.textContent == "save") {
+                button.parentElement.querySelector("span").textContent = editChistes.value;
+                editChistes.value = "";
+                button.textContent = "edit";
+            }else if (button.textContent == "Editar") {
+                button.textContent = "save";
+                const editChistes = document.getElementById("chisteEdit");
+                editChistes.value = button.parentElement.querySelector("span").textContent;
+            }
+        });
+    }); 
+
+    let buttonsDel = document.querySelectorAll("button.btndel").
     forEach(function(button) {
         button.addEventListener("click", function () {
             const parent = button.parentElement;
