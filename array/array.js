@@ -19,3 +19,11 @@ function parseURL(url) {
 
 const url = "https://educacionadistancia.juntadeandalucia.es/centros/sevilla/mod/url/view.php?id=762901";
 console.log(parseURL(url));
+
+function rotateArray(arr, n) {
+    const len = arr.length;
+    n = n % len;
+    return arr.slice(-n).concat(arr.slice(0, -n));
+}
+
+console.log(rotateArray(array, 3));
