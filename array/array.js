@@ -18,7 +18,7 @@ function parseURL(url) {
 }
 
 const url = "https://educacionadistancia.juntadeandalucia.es/centros/sevilla/mod/url/view.php?id=762901";
-console.log(parseURL(url));
+console.log("\n Parsing ", url, "Output ", parseURL(url));
 
 
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -27,5 +27,5 @@ function rotateArray(arr, n) {
     n = n % len;
     return arr.slice(-n).concat(arr.slice(0, -n));
 }
-
-console.log(rotateArray(array, 4));
+console.log("Dato de entrada: ", array);
+console.log("\n Rotación de la lista 4 elementos: ", rotateArray(array, 4));
