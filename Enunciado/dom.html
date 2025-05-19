@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/dom.js"></script>
+    <title>Ejercicio DOM</title>
+    <style>
+        #videoContainer {
+            border: 5px solid #ff9900; /* Color del marco */
+            padding: 10px;
+            display: inline-block;
+            background-color: #f0f0f0; /* Color de fondo */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio DOM</h1>        
+    </header>
+    <main>
+        <h2>Chistes de Programadores - El chiste del día</h2>
+        <div id="videoContainer">
+            <p>Esto es un ejemplo de como pudiera funcionar</p>
+            <video src="DomExample.webm" width="500px" autoplay muted loop>
+                <source src="DomExample.webm" type="video/webm">
+                Tu navegador no soporta el video.
+            </video>        
+        </div>
+        <p id="ramdomText"></p>
+        <ol id="chistesList">
+            <li>
+                <span>¿Cuál es el lenguaje de programación favorito de los fantasmas? Boo-tstrap.</span>
+                <button id="btn1del" class="btndel">Eliminar</button>
+                <button id="btn1Edit" class="btnedit">Editar</button>
+            </li>
+            </button>      
+            <li>
+                <span class="chiste">¿Por qué los programadores prefieren la oscuridad? Porque la luz consume demasiados recursos.</span>
+                <button id="btn2del" class="btndel">Eliminar</button>
+                <button id="btn2Edit" class="btnedit">Editar</button>
+            </li>
+            <li>
+                <span class="chiste">¿Cuál es el animal favorito de los programadores? El Python.</span>
+                <button id="btn3del" class="btndel">Eliminar</button>
+                <button id="btn3Edit" class="btnedit">Editar</button>
+            </li>
+            <li>
+                <span class="chiste">¿Cómo se despiden los programadores? ¡Hasta la vista, baby! Return(0).</span>
+                <button id="btn4del" class="btndel">Eliminar</button>
+                <button id="btn4Edit" class="btnedit">Editar</button>
+            </li>
+            <li>
+                <span class="chiste">¿Por qué el programador fue al terapeuta? Porque tenía demasiados problemas sin resolver.</span>
+                <button id="btn5del" class="btndel">Eliminar</button>
+                <button id="btn5Edit" class="btnedit">Editar</button>
+            </li>
+        </ol>
+        <input type="text" id="chisteEdit">
+        <button id="btnNew" class="btnnew">Nuevo Chiste</button>
+    </main>
+    <footer>
+        <p>Ejercicio hecho por Ignacio Núñez</p>
+    </footer>
+    
+</body>
+</html>
